@@ -428,7 +428,7 @@ req.end(function (res) {
 ## Using the API
 You can use the API via the following methods:
 - [RapidAPI](https://rapidapi.com/DevNullZero/api/binance-futures-leaderboard1)
-- [Direct API URL](http://85.239.231.127:2318)
+- [Direct API URL (500 request per week for each endpoint)](http://85.239.231.127:2318)
 - [Purchasing it](https://t.me/devnullzer0)
 
 ## Contact
