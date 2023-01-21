@@ -9,7 +9,7 @@ The API is written in Python with FastAPI and and AIOHTTP for asynchronous reque
 
 - Get open positions from different traders - You can get open positions from different traders, such as **trader1, trader2, trader3**. Get all position details, such as **symbol, open time, PNL, ROI, amount, etc**.
 
-- Get multiple positions from different traders in one call - You can get multiple positions from different traders in one call, **without calling the API repeatedly and wasting your quota.**
+- Search traders by name - You can search for a specific trader by name, such as **Elon Musk, Vitalik Buterin**.
 
 - Get trader information - You can get trader information, such as **Twitter URL, followers, open positions, etc.** 
 
