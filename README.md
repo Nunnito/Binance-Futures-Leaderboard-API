@@ -4,7 +4,7 @@ A commercial REST API for Binance Smart Money (formerly the Binance Futures Lead
 
 Written in Python with FastAPI and AIOHTTP for asynchronous requests. Uvicorn is used as an ASGI server.
 
-**Full documentation and interactive reference: [api.apicord.com](https://api.apicord.com/)**
+**Full documentation and interactive reference: [Kopyon API docs](https://kopyon.com/binance-smart-money-api/docs/)**
 
 ## Features
 
@@ -24,7 +24,7 @@ Written in Python with FastAPI and AIOHTTP for asynchronous requests. Uvicorn is
 
 ## Authentication
 
-Every request needs an API key in the `X-API-KEY` header.
+You can try the API without a key under a small per-IP allowance. For Free and paid plan quotas, send your API key in the `X-API-KEY` header.
 
 ```
 X-API-KEY: your-api-key
@@ -34,7 +34,7 @@ Responses use `200` on success, `401` for an invalid key, `429` when rate limite
 
 ## Endpoints
 
-Base URL: `https://api.apicord.com/v4`
+Base URL: `https://api.kopyon.com/v4`
 
 | Endpoint | Returns |
 |---|---|
@@ -63,38 +63,38 @@ These examples use `curl`, but any HTTP client works.
 
 ```bash
 curl -H "X-API-KEY: $API_KEY" \
-  "https://api.apicord.com/v4/tradersList?timeRange=7D&rankingType=ROI&order=DESC&onlyShowSharingPosition=true&page=1&rows=20"
+  "https://api.kopyon.com/v4/tradersList?timeRange=7D&rankingType=ROI&order=DESC&onlyShowSharingPosition=true&page=1&rows=20"
 ```
 
 ### Search for a trader by name
 
 ```bash
 curl -H "X-API-KEY: $API_KEY" \
-  "https://api.apicord.com/v4/traderSearch?searchKeyword=whale&timeRange=30D&rankingType=PNL&order=DESC&onlyShowSharingPosition=true&page=1&rows=20"
+  "https://api.kopyon.com/v4/traderSearch?searchKeyword=whale&timeRange=30D&rankingType=PNL&order=DESC&onlyShowSharingPosition=true&page=1&rows=20"
 ```
 
 ### A trader's open USDⓈ-M positions
 
 ```bash
 curl -H "X-API-KEY: $API_KEY" \
-  "https://api.apicord.com/v4/traderOpenPositions?topTraderId=TRADER_ID&marketType=UM&page=1&rows=20"
+  "https://api.kopyon.com/v4/traderOpenPositions?topTraderId=TRADER_ID&marketType=UM&page=1&rows=20"
 ```
 
 ### Position history for one symbol
 
 ```bash
 curl -H "X-API-KEY: $API_KEY" \
-  "https://api.apicord.com/v4/traderPositionHistory?topTraderId=TRADER_ID&marketType=UM&symbol=BTCUSDT&rows=20"
+  "https://api.kopyon.com/v4/traderPositionHistory?topTraderId=TRADER_ID&marketType=UM&symbol=BTCUSDT&rows=20"
 ```
 
-Response schemas for every endpoint are documented at [api.apicord.com](https://api.apicord.com/).
+Response schemas for every endpoint are documented in the [Kopyon API reference](https://kopyon.com/binance-smart-money-api/docs/).
 
 ## Access
 
-Plans and API keys: [api.apicord.com](https://api.apicord.com/).
+Try every endpoint, compare plans, and request an API key on the [Kopyon API page](https://kopyon.com/binance-smart-money-api/). The Free plan includes 10,000 requests per month and does not require a card.
 
-The RapidAPI listing and the old free direct endpoint have been retired, along with the v1 and v2 endpoints they served. If you followed a link to any of them from an earlier version of this README, that is why it did not resolve.
+The [legacy RapidAPI listing](https://rapidapi.com/DevNullZero/api/binance-futures-leaderboard1) remains available for marketplace users. The direct Kopyon v4 API above is the current API and documentation.
 
 ## Contact
 
-Telegram [@nunnito](https://t.me/nunnito) · [support@apicord.com](mailto:support@apicord.com)
+Telegram [@nunnito](https://t.me/nunnito) · [support@kopyon.com](mailto:support@kopyon.com)
